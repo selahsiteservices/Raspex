@@ -6,7 +6,6 @@ const PRODUCTS = {
   'Raspberry Seed Oil': 5500,
   'Charcoal Body Scrub': 4200,
   'Hair Repair Mask': 4500,
-  'Raspberry Seed Powder': 3500,
   'Lip Trio': 3800,
 };
 
