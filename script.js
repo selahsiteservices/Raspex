@@ -9,6 +9,7 @@ const cartTotal = document.getElementById('cartTotal');
 const cartFab = document.getElementById('cartFab');
 const cartClose = document.getElementById('cartClose');
 const checkoutBtn = document.getElementById('checkoutBtn');
+const paypalBtn = document.getElementById('paypalBtn');
 
 const STRIPE_PUBLISHABLE_KEY = 'pk_live_51TOIf5B5y3wD0BeaeoNuGNz7BlG2sok5HXw0hMWtRHy8Pw564kcG6O7o9uEhYGkFKLvb5wCsWsZQU9W7MvQ9xCTj00AB2Jsmzf';
 
@@ -92,6 +93,13 @@ checkoutBtn.addEventListener('click', async () => {
     checkoutBtn.textContent = 'Checkout with Stripe';
     checkoutBtn.disabled = false;
   }
+});
+
+// PayPal checkout
+paypalBtn.addEventListener('click', () => {
+  if (cart.length === 0) return;
+  const total = cart.reduce((sum, item) => sum + item.price, 0);
+  window.open(`https://www.paypal.com/paypalme/quickliftjr/${total}`, '_blank');
 });
 
 // Mobile menu
