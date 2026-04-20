@@ -1,12 +1,13 @@
 const Stripe = require('stripe');
 
 const PRODUCTS = {
-  'Anti-Aging Night Cream': 4900,
-  'Facial Cleanser': 3900,
-  'Raspberry Seed Oil': 5500,
-  'Charcoal Body Scrub': 4200,
-  'Hair Repair Mask': 4500,
-  'Lip Trio': 3800,
+  'Anti-Aging Night Cream': 4999,
+  'Anti-Aging Day Cream': 4999,
+  'Facial Cleanser': 3999,
+  'Raspberry Seed Oil': 5999,
+  'Charcoal Body Scrub': 4999,
+  'Hair Repair Mask': 4999,
+  'Lip Trio': 3999,
 };
 
 exports.handler = async (event) => {
