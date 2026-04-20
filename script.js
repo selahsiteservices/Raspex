@@ -10,17 +10,7 @@ const cartFab = document.getElementById('cartFab');
 const cartClose = document.getElementById('cartClose');
 const checkoutBtn = document.getElementById('checkoutBtn');
 
-// Square payment links per product — replace with real Square links once connected
-const SQUARE_LINKS = {
-  'Anti-Aging Night Cream': 'https://square.link/u/REPLACE_NIGHT_CREAM',
-  'Facial Cleanser': 'https://square.link/u/REPLACE_CLEANSER',
-  'Raspberry Seed Oil': 'https://square.link/u/REPLACE_SEED_OIL',
-  'Plant Stem Cell Serum': 'https://square.link/u/REPLACE_SERUM',
-  'Body & Face Scrub': 'https://square.link/u/REPLACE_SCRUB',
-  'Hair Repair Mask': 'https://square.link/u/REPLACE_HAIR_MASK',
-  'Raspberry Seed Powder': 'https://square.link/u/REPLACE_POWDER',
-  'Lip Trio': 'https://square.link/u/REPLACE_LIP_TRIO',
-};
+const STRIPE_PUBLISHABLE_KEY = 'pk_live_51TOIf5B5y3wD0BeaeoNuGNz7BlG2sok5HXw0hMWtRHy8Pw564kcG6O7o9uEhYGkFKLvb5wCsWsZQU9W7MvQ9xCTj00AB2Jsmzf';
 
 function openCart() {
   cartDrawer.classList.add('open');
@@ -79,19 +69,28 @@ cartFab.addEventListener('click', openCart);
 cartClose.addEventListener('click', closeCart);
 cartOverlay.addEventListener('click', closeCart);
 
-// Checkout — if one item, go directly to Square link; if multiple, go to first item's link
-// Replace this with a real cart/checkout page once Square is fully connected
-checkoutBtn.addEventListener('click', () => {
+checkoutBtn.addEventListener('click', async () => {
   if (cart.length === 0) return;
-  if (cart.length === 1) {
-    const link = SQUARE_LINKS[cart[0].name];
-    if (link) window.open(link, '_blank');
-  } else {
-    // Multi-item: open Square link for each item in new tabs
-    cart.forEach(item => {
-      const link = SQUARE_LINKS[item.name];
-      if (link) window.open(link, '_blank');
+  checkoutBtn.textContent = 'Redirecting...';
+  checkoutBtn.disabled = true;
+  try {
+    const res = await fetch('/.netlify/functions/create-checkout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ items: cart }),
     });
+    const data = await res.json();
+    if (data.url) {
+      window.location.href = data.url;
+    } else {
+      alert('Checkout error. Please try again.');
+      checkoutBtn.textContent = 'Checkout with Stripe';
+      checkoutBtn.disabled = false;
+    }
+  } catch {
+    alert('Checkout error. Please try again.');
+    checkoutBtn.textContent = 'Checkout with Stripe';
+    checkoutBtn.disabled = false;
   }
 });
 
