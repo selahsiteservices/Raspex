@@ -275,22 +275,6 @@ nav {
 .cart-footer { padding: 1.5rem; border-top: 1px solid var(--border); }
 .cart-total { display: flex; justify-content: space-between; font-weight: 600; margin-bottom: 1rem; font-size: 1rem; }
 .checkout-btn { width: 100%; text-align: center; padding: 1rem; font-size: 0.8rem; }
-.btn-paypal {
-  display: block;
-  width: 100%;
-  background: #FFC439;
-  color: #003087;
-  border: none;
-  padding: 1rem;
-  font-family: var(--font-sans);
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  cursor: pointer;
-  margin-top: 0.75rem;
-  transition: background 0.2s;
-}
-.btn-paypal:hover { background: #f0b429; }
 .cart-note { text-align: center; color: var(--muted); font-size: 0.7rem; margin-top: 0.75rem; }
 
 /* ── Testimonials ── */
