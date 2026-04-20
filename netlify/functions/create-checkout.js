@@ -4,7 +4,7 @@ const PRODUCTS = {
   'Anti-Aging Night Cream': 4900,
   'Facial Cleanser': 3900,
   'Raspberry Seed Oil': 5500,
-'Body & Face Scrub': 4200,
+  'Charcoal Body Scrub': 4200,
   'Hair Repair Mask': 4500,
   'Raspberry Seed Powder': 3500,
   'Lip Trio': 3800,
