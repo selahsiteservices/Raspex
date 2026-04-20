@@ -103,6 +103,7 @@ nav {
   letter-spacing: 0.15em;
   color: var(--raspberry);
 }
+.nav-logo { height: 48px; width: auto; display: block; }
 .nav-links {
   list-style: none;
   display: flex;
