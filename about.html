@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Story | Raspex</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    .page-hero { padding: 8rem 2rem 5rem; background: var(--raspberry-dark); color: #fff; text-align: center; }
+    .page-hero h1 { color: #fff; }
+    .page-hero p { color: rgba(255,255,255,0.7); margin-top: 1rem; max-width: 560px; margin-left: auto; margin-right: auto; }
+    .story-section { padding: 5rem 2rem; max-width: 760px; margin: 0 auto; }
+    .story-section h2 { margin-bottom: 1.5rem; }
+    .story-section p { color: var(--muted); font-size: 1rem; line-height: 1.9; margin-bottom: 1.5rem; }
+    .story-section .highlight { background: var(--cream); border-left: 3px solid var(--raspberry); padding: 1.5rem 2rem; margin: 2rem 0; font-family: var(--font-serif); font-size: 1.2rem; font-style: italic; color: var(--charcoal); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo">RASPEX</a>
+      <ul class="nav-links">
+        <li><a href="/#products">Shop</a></li>
+        <li><a href="about.html">Our Story</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="/#products" class="btn-primary nav-cta">Shop Now</a>
+      <button class="menu-toggle" id="menuToggle">&#9776;</button>
+    </div>
+    <ul class="mobile-menu" id="mobileMenu">
+      <li><a href="/#products">Shop</a></li>
+      <li><a href="about.html">Our Story</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero">
+    <p class="section-label">Our Story</p>
+    <h1>30 Years of Raspberry Science.<br /><em>Reimagined for Today.</em></h1>
+    <p>A family legacy, rediscovered. Premium ingredients, elevated for a new generation.</p>
+  </div>
+
+  <div class="story-section">
+    <p class="section-label">The Beginning</p>
+    <h2>Where It Started</h2>
+    <p>In 1993, a vision was born — to harness the extraordinary power of the Meeker raspberry and bring it into skincare and nutrition. What started as a passion for natural, science-backed wellness grew into a product line that quietly built one of the most loyal customer bases in natural skincare.</p>
+    <p>For over three decades, thousands of customers reordered year after year — not because of advertising, but because the products worked. The raspberry seed's rich concentration of antioxidants, ellagic acid, and omega fatty acids delivered results that synthetic formulas simply couldn't match.</p>
+
+    <div class="highlight">"The best skincare I've ever used. I've been reordering for over 12 years and I will never stop." — longtime Raspex customer</div>
+
+    <p class="section-label">Today</p>
+    <h2>The Reimagining</h2>
+    <p>Raspex is back — and elevated. The same commitment to the Meeker raspberry and the science behind it, now paired with modern luxury formulations, premium packaging, and a direct-to-you experience that puts quality first.</p>
+    <p>We've taken what our grandfather built — a product people loved enough to keep ordering for 30 years — and made it worthy of the next 30. For the loyal customers who never stopped believing in it, and for a new generation discovering the power of what nature grows.</p>
+    <p>This is family. This is Raspex.</p>
+
+    <div style="text-align:center; margin-top: 3rem;">
+      <a href="/#products" class="btn-primary">Shop the Collection</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo">RASPEX</span>
+        <p>Premium raspberry skincare rooted in 30 years of science. Est. 1993. Reimagined.</p>
+      </div>
+      <div class="footer-links">
+        <a href="/#products">Shop</a>
+        <a href="about.html">Our Story</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Raspex. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+  </script>
+</body>
+</html>

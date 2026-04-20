@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Raspex</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    .page-hero { padding: 8rem 2rem 5rem; background: var(--raspberry-dark); color: #fff; text-align: center; }
+    .page-hero h1 { color: #fff; }
+    .page-hero p { color: rgba(255,255,255,0.7); margin-top: 1rem; }
+    .contact-section { padding: 5rem 2rem; max-width: 600px; margin: 0 auto; }
+    .contact-form { display: flex; flex-direction: column; gap: 1.25rem; margin-top: 2rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    .form-group label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--charcoal); }
+    .form-group input, .form-group textarea, .form-group select {
+      padding: 0.85rem 1rem;
+      border: 1.5px solid var(--border);
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      background: var(--warm-white);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus, .form-group textarea:focus { border-color: var(--raspberry); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .contact-form .btn-primary { align-self: flex-start; }
+    .success-msg { color: var(--raspberry); font-weight: 600; padding: 1rem 0; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo">RASPEX</a>
+      <ul class="nav-links">
+        <li><a href="/#products">Shop</a></li>
+        <li><a href="about.html">Our Story</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="/#products" class="btn-primary nav-cta">Shop Now</a>
+      <button class="menu-toggle" id="menuToggle">&#9776;</button>
+    </div>
+    <ul class="mobile-menu" id="mobileMenu">
+      <li><a href="/#products">Shop</a></li>
+      <li><a href="about.html">Our Story</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero">
+    <p class="section-label">Contact Us</p>
+    <h1>We'd Love to Hear<br /><em>From You</em></h1>
+    <p>Questions about your order or our products? We're here.</p>
+  </div>
+
+  <div class="contact-section">
+    <form class="contact-form" id="contactForm" netlify>
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required placeholder="Jane Smith" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="jane@email.com" />
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject">
+          <option>Order Question</option>
+          <option>Product Question</option>
+          <option>Returns & Exchanges</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required placeholder="How can we help?"></textarea>
+      </div>
+      <button type="submit" class="btn-primary">Send Message</button>
+    </form>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo">RASPEX</span>
+        <p>Premium raspberry skincare rooted in 30 years of science. Est. 1993. Reimagined.</p>
+      </div>
+      <div class="footer-links">
+        <a href="/#products">Shop</a>
+        <a href="about.html">Our Story</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Raspex. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+  </script>
+</body>
+</html>
