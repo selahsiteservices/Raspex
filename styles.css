@@ -91,7 +91,7 @@ nav {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
-  height: 70px;
+  height: 88px;
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -103,7 +103,7 @@ nav {
   letter-spacing: 0.15em;
   color: var(--raspberry);
 }
-.nav-logo { height: 48px; width: auto; display: block; }
+.nav-logo { height: 64px; width: auto; display: block; }
 .nav-links {
   list-style: none;
   display: flex;
@@ -133,7 +133,7 @@ nav {
   align-items: center;
   background: linear-gradient(135deg, #1a0810 0%, #3d0e20 40%, #6b1535 70%, #8B1A3A 100%);
   overflow: hidden;
-  padding-top: 70px;
+  padding-top: 88px;
 }
 .hero::before {
   content: '';
